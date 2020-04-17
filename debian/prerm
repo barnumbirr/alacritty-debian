@@ -1,0 +1,4 @@
+#!/bin/sh
+set -e
+
+update-alternatives --remove x-terminal-emulator /usr/bin/alacritty

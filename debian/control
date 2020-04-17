@@ -1,0 +1,31 @@
+Source: alacritty
+Section: x11
+Priority: optional
+Maintainer: Martin Simon <me@martinsimon.me>
+Build-Depends:
+ cargo:native,
+ debhelper (>= 11),
+ help2man,
+ libfreetype6-dev,
+ libfontconfig1-dev,
+ libxcb1-dev,
+ libxcb-render0-dev,
+ libxcb-shape0-dev,
+ libxcb-xfixes0-dev,
+ rustc:native,
+ python3,
+Standards-Version: 4.3.0
+Homepage: https://github.com/alacritty/alacritty
+
+Package: alacritty
+Architecture: amd64
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
+Recommends:
+ xclip
+Provides:
+ x-terminal-emulator
+Description: GPU-accelerated terminal emulator
+ Alacritty is the fastest terminal emulator in existence. Using the GPU for
+ rendering enables optimizations that simply aren't possible without it.

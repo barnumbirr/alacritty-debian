@@ -1,0 +1,53 @@
+name: Build alacritty Debian packages
+
+on:
+ push:
+  tags:
+    - "*"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Build packages
+        run: |
+          set -xe
+          mkdir -p assets
+          ./build.sh -i debian:buster-slim
+          rename.ul .deb _debian_buster.deb target/alacritty_*.deb
+          mv -n target/alacritty_*.deb assets/
+
+          ./build.sh -i debian:testing-slim
+          rename.ul .deb _debian_testing.deb target/alacritty_*.deb
+          mv -n target/alacritty_*.deb assets/
+
+          ./build.sh -i debian:unstable-slim
+          rename.ul .deb _debian_unstable.deb target/alacritty_*.deb
+          mv -n target/alacritty_*.deb assets/
+      - name: Create release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload packages
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ID: ${{ steps.create_release.outputs.id }}
+        run: |
+          set -xe
+          for asset in assets/*
+          do
+            UPLOAD_URL="https://uploads.github.com/repos/$GITHUB_REPOSITORY/releases/$ID/assets"
+            curl                                          \
+              -X POST                                     \
+              -H "Authorization: token $GITHUB_TOKEN"     \
+              -H "Content-Type: application/octet-stream" \
+              --data-binary @"$asset"                     \
+              "${UPLOAD_URL}?name=$(basename $asset)"
+          done
