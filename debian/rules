@@ -19,3 +19,9 @@ override_dh_auto_install:
 	install -Dm0644 "extra/logo/alacritty-term.svg" "debian/alacritty/usr/share/pixmaps/com.alacritty.Alacritty.svg"
 	install -Dm0644 "extra/linux/Alacritty.desktop" "debian/alacritty/usr/share/applications/com.alacritty.Alacritty.desktop"
 	sed -i 's/Icon=Alacritty/Icon=com.alacritty.Alacritty/g' "debian/alacritty/usr/share/applications/com.alacritty.Alacritty.desktop"
+
+override_dh_installexamples:
+	dh_installexamples "alacritty.yml"
+
+override_dh_compress:
+	dh_compress -Xexamples
