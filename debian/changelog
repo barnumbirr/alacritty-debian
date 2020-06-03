@@ -1,4 +1,10 @@
-alacritty (0.4.2-2) unstable; urgency=medium
+alacritty (0.4.3-1) unstable; urgency=medium
+
+  * Version 0.4.3
+
+ -- Martin Simon <me@martinsimon.me>  Wed, 03 Jun 2020 00:00:00 +0000
+
+ alacritty (0.4.2-2) unstable; urgency=medium
 
   * Version 0.4.2
   * add default package config file to examples
