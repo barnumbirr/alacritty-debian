@@ -9,12 +9,12 @@ If you have [Docker](https://www.docker.com/) installed locally, just run the fo
 ```bash
 user@hostname$ ./build.sh
 ```
-By default this will build alacritty 0.4.3 on Debian Buster.
+By default this will build alacritty v0.5.0-rc1 on Debian Buster.
 
 If you want to customize the build at runtime, use the following:
 
 ```bash
-user@hostname$ ./build.sh -i debian:unstable-slim -v 0.3.3
+user@hostname$ ./build.sh -i debian:unstable-slim -v 0.4.3
 ```
 Don't forget to update `debian/changelog` so your package is generated with the correct version.
 
