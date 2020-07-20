@@ -14,7 +14,7 @@ Build-Depends:
  libxcb-xfixes0-dev,
  rustc:native,
  python3,
-Standards-Version: 4.3.0
+Standards-Version: 4.5.0
 Homepage: https://github.com/alacritty/alacritty
 
 Package: alacritty
