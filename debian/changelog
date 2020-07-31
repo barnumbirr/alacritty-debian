@@ -1,3 +1,9 @@
+alacritty (0.5.0-1) unstable; urgency=medium
+
+  * Version 0.5.0
+
+ -- Martin Simon <me@martinsimon.me>  Sat, 01 Aug 2020 00:00:00 +0000
+
 alacritty (0.5.0.rc4-1) unstable; urgency=medium
 
   * Version 0.5.0.rc4
