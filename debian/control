@@ -22,8 +22,6 @@ Architecture: amd64
 Depends:
  ${misc:Depends},
  ${shlibs:Depends},
-Recommends:
- xclip
 Provides:
  x-terminal-emulator
 Description: GPU-accelerated terminal emulator
