@@ -18,7 +18,7 @@ override_dh_auto_install:
 	install -Dm0644 "extra/completions/_alacritty" "debian/alacritty/usr/share/vendor-completions/_alacritty"
 	install -Dm0644 "extra/logo/alacritty-term.svg" "debian/alacritty/usr/share/pixmaps/com.alacritty.Alacritty.svg"
 	install -Dm0644 "extra/linux/Alacritty.desktop" "debian/alacritty/usr/share/applications/com.alacritty.Alacritty.desktop"
-	install -Dm0644 "extra/alacritty.info" "debian/alacritty/usr/share/terminfo/a/alacritty"
+	tic -x -e alacritty,alacritty-direct -o "debian/alacritty/usr/share/terminfo" "extra/alacritty.info"
 	sed -i 's/Icon=Alacritty/Icon=com.alacritty.Alacritty/g' "debian/alacritty/usr/share/applications/com.alacritty.Alacritty.desktop"
 
 override_dh_installexamples:

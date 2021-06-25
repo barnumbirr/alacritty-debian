@@ -1,3 +1,9 @@
+alacritty (0.8.0-4) unstable; urgency=medium
+
+  * Fix Alacritty terminfo file compilation
+
+ -- Martin Simon <me@martinsimon.me>  Fri, 25 Jun 2021 00:00:00 +0000
+
 alacritty (0.8.0-3) unstable; urgency=medium
 
   * Fix Alacritty terminfo file extension
