@@ -12,6 +12,7 @@ Build-Depends:
  libxcb-render0-dev,
  libxcb-shape0-dev,
  libxcb-xfixes0-dev,
+ libxkbcommon-dev,
  rustc:native,
  python3,
 Standards-Version: 4.5.0
