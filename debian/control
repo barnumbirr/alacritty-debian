@@ -4,7 +4,7 @@ Priority: optional
 Maintainer: Martin Simon <me@martinsimon.me>
 Build-Depends:
  cargo:native,
- debhelper (>= 11),
+ debhelper (>= 12),
  help2man,
  libfreetype6-dev,
  libfontconfig1-dev,
@@ -15,7 +15,7 @@ Build-Depends:
  libxkbcommon-dev,
  rustc:native,
  python3,
-Standards-Version: 4.5.0
+Standards-Version: 4.5.1
 Homepage: https://github.com/alacritty/alacritty
 
 Package: alacritty
