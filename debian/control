@@ -5,7 +5,6 @@ Maintainer: Martin Simon <me@martinsimon.me>
 Build-Depends:
  cargo:native,
  debhelper (>= 12),
- help2man,
  libfreetype6-dev,
  libfontconfig1-dev,
  libxcb1-dev,
