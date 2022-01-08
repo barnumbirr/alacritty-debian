@@ -9,7 +9,7 @@ If you have [Docker](https://www.docker.com/) installed locally, just run the fo
 ```bash
 user@hostname$ ./build.sh
 ```
-By default this will build alacritty v0.10.0-rc1 on Debian Buster.
+By default this will build alacritty v0.10.0-rc2 on Debian Buster.
 
 If you want to customize the build at runtime, use the following:
 
@@ -28,7 +28,7 @@ To publish a new package version to Github, follow these steps:
 ## License
 
 ```
-Copyright 2020-2021 Martin Simon
+Copyright 2020-2022 Martin Simon
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
