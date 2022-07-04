@@ -18,7 +18,7 @@ Standards-Version: 4.5.1
 Homepage: https://github.com/alacritty/alacritty
 
 Package: alacritty
-Architecture: amd64
+Architecture: amd64 arm64
 Depends:
  ${misc:Depends},
  ${shlibs:Depends},
