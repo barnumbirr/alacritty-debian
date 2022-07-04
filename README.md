@@ -4,7 +4,8 @@ This repository contains the source to build a Debian package for [alacritty](ht
 
 ## Usage
 
-If you have [Docker](https://www.docker.com/) installed locally, just run the following:
+If you have [Docker](https://www.docker.com/) or [Podman](https://podman.io/)
+installed locally, just run the following:
 
 ```bash
 user@hostname$ ./build.sh
