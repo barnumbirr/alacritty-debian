@@ -17,9 +17,9 @@ override_dh_auto_install:
 	install -Dm0644 "extra/completions/alacritty.bash" "debian/alacritty/usr/share/bash-completion/completions/alacritty"
 	install -Dm0644 "extra/completions/alacritty.fish" "debian/alacritty/usr/share/fish/completions/alacritty.fish"
 	install -Dm0644 "extra/completions/_alacritty" "debian/alacritty/usr/share/vendor-completions/_alacritty"
-	install -Dm0644 "extra/logo/alacritty-term.svg" "debian/alacritty/usr/share/pixmaps/com.alacritty.Alacritty.svg"
-	install -Dm0644 "extra/linux/Alacritty.desktop" "debian/alacritty/usr/share/applications/com.alacritty.Alacritty.desktop"
-	sed -i 's/Icon=Alacritty/Icon=com.alacritty.Alacritty/g' "debian/alacritty/usr/share/applications/com.alacritty.Alacritty.desktop"
+	install -Dm0644 "extra/logo/alacritty-term.svg" "debian/alacritty/usr/share/pixmaps/org.alacritty.Alacritty.svg"
+	install -Dm0644 "extra/linux/Alacritty.desktop" "debian/alacritty/usr/share/applications/org.alacritty.Alacritty.desktop"
+	sed -i 's/Icon=Alacritty/Icon=org.alacritty.Alacritty/g' "debian/alacritty/usr/share/applications/org.alacritty.Alacritty.desktop"
 
 override_dh_installexamples:
 	dh_installexamples "alacritty.yml"
