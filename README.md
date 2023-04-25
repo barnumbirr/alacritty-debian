@@ -9,7 +9,7 @@ If you have [Docker](https://www.docker.com/) installed locally, just run the fo
 ```bash
 user@hostname$ ./build.sh
 ```
-By default this will build alacritty v0.11.0 on Debian Buster.
+By default this will build alacritty v0.12.0 on Debian Bullseye.
 
 If you want to customize the build at runtime, use the following:
 
