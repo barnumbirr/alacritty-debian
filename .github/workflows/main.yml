@@ -11,7 +11,13 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
+    # Continue running on Ubuntu 20.04 because I can't be bothered to fix
+    # the whole rename.ul drama.
+    # https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=926637
+    # rename.ul was added back to Debian Testing so it should be back for Ubuntu
+    # 24.04
+    # https://manpages.debian.org/testing/util-linux/rename.ul.1.en.html
     steps:
       - name: Checkout
         uses: actions/checkout@v2
